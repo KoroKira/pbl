@@ -34,14 +34,23 @@ Pour configurer correctement le serveur XAMPP, suis les étapes suivantes:
 Table users :
 
 id INT AUTO_INCREMENT PRIMARY KEY : Identifiant unique de l'utilisateur.
+
 username VARCHAR(255) UNIQUE : Nom d'utilisateur de l'utilisateur.
+
 password VARCHAR(255) : Mot de passe de l'utilisateur (assure-toi de stocker les mots de passe de manière sécurisée, par exemple en les hashant).
+
 isAdmin BOOLEAN DEFAULT 0 : Champ pour indiquer si l'utilisateur est administrateur (1 pour admin, 0 pour utilisateur standard).
+
+
 Table messages :
 
 id INT AUTO_INCREMENT PRIMARY KEY : Identifiant unique du message.
+
 user_id INT : Référence à l'utilisateur qui a posté le message (clé étrangère vers la table users).
+
 message TEXT : Contenu du message.
+
 timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP : Horodatage du moment où le message a été posté.
+
 
 
